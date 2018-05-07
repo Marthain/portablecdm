@@ -168,7 +168,7 @@ class OperationView extends Component {
             onPress={this._toggleCollapsed}>
             <View>
               <View style={{flexDirection: 'row'}}>
-                <Text style={styles.operationHeader}>{operation.definitionId.replace(/_/g, ' ')}</Text>
+                <Text style={(operation.definitionId == "SLUDGE_OPERATION" ? styles.sludgeHeader : styles.operationHeader)}>{operation.definitionId.replace(/_/g, ' ')}</Text>
                 {operation.warnings.length > 0 && 
                 <Icon name='warning' color={colorScheme.warningColor}/>
                 }
@@ -445,6 +445,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold', 
     fontSize: 18,
     color: colorScheme.quaternaryTextColor, // Snyggare med EmeraldBlue(queaternaryColor)
+  },
+  sludgeHeader: {
+    fontWeight: 'bold', 
+    fontSize: 18,
+    color: colorScheme.sludgeConfirmedColor, // Snyggare med EmeraldBlue(queaternaryColor)
   },
   operationInfo: {
     fontSize: 10,
