@@ -72,7 +72,7 @@ class SelectFavoriteState extends Component {
             <View style={styles.container}>
                 <MiniHeader
                     navigation={this.props.navigation}
-                    title='Favorite states'
+                    title='Favourite States'
                     rightIconFunction={this.replaceFavoriteStates}
                     leftIconFunction={this.onBackIconPressed}
                 />
@@ -87,7 +87,8 @@ class SelectFavoriteState extends Component {
                     textInputRef='textInput'
                 />
                 <FlatList
-                    data={this.search(this.props.stateCatalogue, this.state.searchTerm)}
+                    //data={this.search(this.props.stateCatalogue, this.state.searchTerm)}
+                    data={this.search(this.props.stateCatalogue, "Sludge")}
                     extraData={this.state}
                     keyExtractor={(item, index) => index}
                     renderItem={({ item }) => {

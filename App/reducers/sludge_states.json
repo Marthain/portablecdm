@@ -1,0 +1,74 @@
+[
+    {
+    "StateId": "SludgeOp_Commenced",
+    "Name": "Sludge Operation Commenced",
+    "Description": "Sludge Operation starts",
+    "ServiceType": "STATIONARY",
+    "ServiceObject": "SLUDGE_OPERATION",
+    "TimeSequence": "COMMENCED"
+    },
+    {
+    "StateId": "SludgeOp_Completed",
+    "Name": "Sludge Operation Completed",
+    "Description": "Sludge Operation stops",
+    "ServiceType": "STATIONARY",
+    "ServiceObject": "SLUDGE_OPERATION",
+    "TimeSequence": "COMPLETED"
+    },
+    {
+    "StateId": "Arrival_SludgeVessel_Vessel",
+    "Name": "Sludge Vessel Alongside Vessel",
+    "Description": "Sludge vessel is alongside vessel",
+    "TimeSequence": "ARRIVAL_TO",
+    "ReferenceObject": "SLUDGE_VESSEL",
+    "LocationType": "VESSEL"
+    },
+    {
+    "StateId": "Departure_SludgeVessel_Vessel",
+    "Name": "Sludge Vessel Departed Vessel",
+    "Description": "Sludge vessel has departed the vessel",
+    "TimeSequence": "DEPARTURE_FROM",
+    "ReferenceObject": "SLUDGE_VESSEL",
+    "LocationType": "VESSEL"
+    },
+    {
+    "StateId": "SludgeOp_Requested",
+    "Name": "Sludge Operation Requested",
+    "Description": "Sludge Operation requested",
+    "ServiceType": "STATIONARY",
+    "ServiceObject": "SLUDGE_OPERATION",
+    "TimeSequence": "REQUESTED"
+    },
+    {
+    "StateId": "SludgeOp_ReqReceived",
+    "Name": "Sludge Operation Request Received",
+    "Description": "Sludge Operation Request Received",
+    "ServiceType": "STATIONARY",
+    "ServiceObject": "SLUDGE_OPERATION",
+    "TimeSequence": "REQUEST_RECEIVED"
+    },
+    {
+    "StateId": "SludgeOp_Confirmed",
+    "Name": "Sludge Operation Confirmed",
+    "Description": "Sludge Operation confirmed",
+    "ServiceType": "STATIONARY",
+    "ServiceObject": "SLUDGE_OPERATION",
+    "TimeSequence": "CONFIRMED"
+    },
+    {
+    "StateId": "SludgeOp_Denied",
+    "Name": "Sludge Operation Request Denied",
+    "Description": "Sludge Operation Request Denied",
+    "ServiceType": "STATIONARY",
+    "ServiceObject": "SLUDGE_OPERATION",
+    "TimeSequence": "DENIED"
+    },
+    {
+    "StateId": "SludgeOp_Cancelled",
+    "Name": "Sludge Operation Cancelled",
+    "Description": "Sludge Operation Cancelled",
+    "ServiceType": "STATIONARY",
+    "ServiceObject": "SLUDGE_OPERATION",
+    "TimeSequence": "CANCELLED"
+    }
+]

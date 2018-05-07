@@ -29,15 +29,16 @@ class StateList extends Component {
     }
   }
 
+
   render() {
     const { navigate, state } = this.props.navigation;
     const initNew = !!state.params;
-    const { getState, stateCatalogue } = this.props;
+    const { sludgeStates, getState, stateCatalogue } = this.props;
     let favoriteStates = this.props.favoriteStates.sort((a,b) => (a < b ? -1 : 1));
 
     return(
       <View style={styles.container}>
-        <TopHeader title={initNew ? 'Create port call' : 'Favorite States'}
+        <TopHeader title={initNew ? 'Create port call' : 'Create time stamp'}
           navigation={this.props.navigation}
           firstPage={initNew}
           rightIconFunction={this.onAddStatesPress.bind(this)} 
@@ -89,6 +90,7 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state) {
   return {
+    sludgeStates: state.states.sludgeStates,
     favoriteStates: state.states.favoriteStates,
     getState: state.states.stateById,
     stateCatalogue: state.states.stateCatalogue,
