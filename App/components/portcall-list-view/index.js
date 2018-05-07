@@ -130,7 +130,6 @@ class PortCallList extends Component {
                     >
                     <List>
                         {
-
                             this.search(portCalls, searchTerm).map( (portCall) => (
                                 <ListItem
                                     roundAvatar
@@ -138,7 +137,7 @@ class PortCallList extends Component {
                                     key={portCall.portCallId}
                                     title={portCall.vessel.name}
                                     badge={{element: this.renderFavorites(portCall)}}
-                                    titleStyle={styles.titleStyle}
+                                    titleStyle={(portCall.vessel.name == "Ternholm" ? styles.titleSludge : styles.titleStyle)}
                                     subtitle={getDateTimeString(new Date(portCall.startTime))}
                                     subtitleStyle={styles.subTitleStyle}
                                     // rightTitle={portCall.stage ? portCall.stage.replace(/_/g, ' ') : undefined}
@@ -227,7 +226,7 @@ class PortCallList extends Component {
 
     search(portCalls, searchTerm) {
         let { filters } = this.props;
-
+        
         return portCalls.filter(portCall => {
             return (portCall.vessel.name.toUpperCase().includes(searchTerm.toUpperCase()) ||
             portCall.vessel.imo.split('IMO:')[1].startsWith(searchTerm) ||
@@ -270,6 +269,10 @@ const styles = StyleSheet.create({
     },
     titleStyle: {
         color: colorScheme.quaternaryTextColor,
+    },
+    titleSludge: {
+        color: colorScheme.sludgeReqestedColor,
+        fontWeight: "bold",
     },
     subTitleStyle: {
         color: colorScheme.tertiaryTextColor,
