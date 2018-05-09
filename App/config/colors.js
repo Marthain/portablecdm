@@ -14,6 +14,8 @@ const colorScheme = {
   shadowColor : 'black',
   warningColor: '#FF6700', // Safety Orange | Warning 
   actualColor: '#1A936F', // Illuminating Emerald | ACTUAL green
+  sludgeReqestedColor: '#FF6700', // Same Orange as warninColor.
+  sludgeConfirmedColor: '#1A936F', // Same green as actualColor.
   estimateColor: '#0B4F6C', // Dark Imperial Blue | ESTIMATE dark blue
   targetColor: '#DAA520', // Goldenrod
   recommendedColor: '#8B4513', // Saddle brown
