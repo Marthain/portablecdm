@@ -21,6 +21,7 @@ import {
 
 import TopHeader from '../top-header-view';
 import OperationView from './sections/operationview';
+//import OperationView from './sections/operationview';
 
 import { 
     fetchPortCallEvents, 
@@ -89,7 +90,7 @@ class TimeLineView extends Component {
     goToStateList = () => {
         this.props.navigation.navigate('FavoriteStates');
     }
-    
+
     render() {
         const { loading, operations, vesselName } = this.props;
         const {params} = this.props.navigation.state;
@@ -158,10 +159,9 @@ class TimeLineView extends Component {
 
     createShowHideExpiredIcon() {
         return {
-            name: 'remove-red-eye',
+            name: 'visibility-off',
             color: 'white',
-            onPress: () => this.props.navigation.goBack(),
-            //onPress: () => this.props.navigation.navigate('SimplifiedTimeLineView'),
+            onPress: () => this.props.navigation.navigate('TimeLineView'),
             //onPress: () => this.setState({showExpiredStates: !this.state.showExpiredStates}),
         };
     }

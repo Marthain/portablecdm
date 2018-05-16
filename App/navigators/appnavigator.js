@@ -6,6 +6,7 @@ import LoginView            from '../components/login-view';
 import SendPortCall         from '../components/send-portcall-view';
 import StateList            from '../components/state-list-view';
 import TimeLineView         from '../components/timeline-view';
+import SimplifiedTimeLineView   from '../components/simplified-timeline-view';
 import PortCallList         from '../components/portcall-list-view';
 import FilterMenu           from '../components/portcall-list-view/sections/filterMenu';
 import StateDetails         from '../components/timeline-view/sections/statedetails';
@@ -27,17 +28,31 @@ const BerthViewNavigator = StackNavigator({
 }, {
     headerMode: 'none'
 });
-
 const TimeLineNavigator = StackNavigator({
-  TimeLineDetails: {screen: TimeLineView},
+  TimeLineDetails: {screen: SimplifiedTimeLineView},
   StateDetails: { screen: StateDetails},
   FavoriteStates: { screen: StateList },
   SelectFavoriteStatesTimeLine: { screen: SelectFavoriteState },
   SendPortCall: { screen: SendPortCall },
+  TimeLineView: { screen: TimeLineView },
+  SimplifiedTimeLineView: { screen: SimplifiedTimeLineView },
+  PortCallList: { screen: PortCallList },
 }, {
   headerMode: 'none',
 });
-
+/*
+const SimplifiedTimeLineNavigator = StackNavigator({
+  TimeLineDetails: {screen: SimplifiedTimeLineView},
+  StateDetails: { screen: StateDetails},
+  FavoriteStates: { screen: StateList },
+  SelectFavoriteStatesTimeLine: { screen: SelectFavoriteState },
+  SendPortCall: { screen: SendPortCall },
+  TimeLineView: { screen: TimeLineView },
+  SimplifiedTimeLineView: { screen: SimplifiedTimeLineView },
+}, {
+  headerMode: 'none',
+});
+*/
 const PortCallListNavigator = StackNavigator({
   PortCallList: { screen: PortCallList},
   FilterMenu: {screen: FilterMenu},
@@ -64,7 +79,7 @@ const InitiatePortCallNavigator = StackNavigator({
 const MainNavigator = DrawerNavigator({
     PortCalls: { screen: PortCallListNavigator }, // THIS SHOULD BE FIRST!!
     Berths: { screen: BerthViewNavigator }, 
-    TimeLine: {screen: TimeLineNavigator},
+    SimplifiedTimeLine: {screen: TimeLineNavigator},
     FavoriteStatesSideMenu: { screen: StateList },
     FavoriteStatesInit: { screen: InitiatePortCallNavigator },
     VesselInfo: { screen: VesselInfo },

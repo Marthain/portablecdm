@@ -145,7 +145,7 @@ class PortCallList extends Component {
                                     onPress={() => {
                                         //console.log(JSON.stringify(portCall.vessel));
                                         selectPortCall(portCall);
-                                        navigate('TimeLine')
+                                        navigate('SimplifiedTimeLine')
                                     }}
                                     onLongPress={() => {
                                         Alert.alert(

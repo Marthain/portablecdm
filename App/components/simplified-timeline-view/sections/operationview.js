@@ -120,7 +120,7 @@ class OperationView extends Component {
     let renderRedLine = startTime > 0 && currentTime >= startTime && currentTime <= endTime;
     let redlineStyle = this._calculateRedline(startTime, endTime);
 
-    return (
+    return ( (operation.definitionId == "SLUDGE_OPERATION" ? (
       
       <View style={styles.container} onLayout={(event) => {
             if(renderRedLine) {
@@ -224,6 +224,7 @@ class OperationView extends Component {
             addStatement={(stateId, mostRelevantStatement) => this.addStatement(stateId, mostRelevantStatement)}
         />
       </View>
+      ) : null )
     );
   }
 
